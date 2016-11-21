@@ -6,10 +6,6 @@ import java.awt.Color;
 import com.thehowtotutorial.splashscreen.JSplash;
 
 
-/**
- * This class is the super class. In another words, it is the first class to start processing when you compile the software.
- * @author U1476904 Azhan Rashid
- */
 
 public class GameLaunch {
    
@@ -17,13 +13,7 @@ public class GameLaunch {
 		super();		//This class is the super class.
 	}
 	
-	/**
-     * @param args the command line arguments
-     * Here I am stating which class should start processing when the user run the program. 
-     * The MainMenu class is important because it is the first window frame, when the splash screen has completed it process.
-     * The Splash class is the first thing the program do when you compile the project. It is simply a picture with a boot up bar at the bottom with several names.
-     * The CustomizeBoard class is used to create the game grid, it has a strong relation ship with the Player class as well. 
-     */
+	
     public static void main(String[] args) { 
     	
     	try {
@@ -32,8 +22,8 @@ public class GameLaunch {
             GameMenu mainMenu = new GameMenu();  
             CustomizeBoard cus = new CustomizeBoard();
             Players player = new Players();
-            SplashScreen spl = new SplashScreen(); 
-            spl.splash();  //making the splash screen to operate in the super class.
+            //SplashScreen spl = new SplashScreen(); 
+            //spl.splash();  //making the splash screen to operate in the super class.
             mainMenu.setClasses(cus,player); //using these variable made the class to have less code.
             cus.setClasses(player,null, null);
             mainMenu.setVisibility(true); //Setting the MainMenu class visible
@@ -42,8 +32,8 @@ public class GameLaunch {
     		e.printStackTrace();
     	}
     	
-    	Music music = new Music();
-    	music.backgroundMusic();
+    	//Music music = new Music();
+    	//music.backgroundMusic();
     
     }
     /**

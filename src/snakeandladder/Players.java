@@ -1,12 +1,7 @@
 
 package snakeandladder;
 
-/**
- * This class handles all the operation for the player within the game. It handles the players, names, the player move system.
- * It also handles your number of scores, if you complete the game and finish with a score higher to the people in the high score table, this will rank your score.
- * To know if you are the top 10, a message will pop up just after the game is finished telling you, you have scored a high score.
- * Here we are using CustomiseBoard class to result the high score table.
- */
+
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

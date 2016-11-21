@@ -10,14 +10,9 @@ import java.util.Random;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-/**
- * 
- * @author U1476904 Azhan Rashid
- *The Overall class here is where you can customise your own snake and ladders grid if you want. This class has a relationship with "Players", and GridComp and "Grid" class. 
- *It needs the player functionality to choose the amount of players and need the playing board functionality to set the customised snakes and ladders.
- */
+
 public class CustomizeBoard implements Serializable{
-    int setRows =10, setColumns=10;   //Here i am setting the amount of columns and rows, in this case, it is 100 box grid.
+    int setRows =5, setColumns=5;   //Here i am setting the amount of columns and rows, in this case, it is 100 box grid.
     ArrayList<Snakes> snakes = new ArrayList<>();  //We need to display the snakes icons, so we use a array to make the snake to change the player down to a lower number.
     ArrayList<Ladders> ladders = new ArrayList<>(); //We need to display the ladders icons, so we use a array to make the ladder to change the player up to a higher number.
     Players player=null;   //At this point, the Player class is in a black hole.
@@ -62,9 +57,9 @@ public class CustomizeBoard implements Serializable{
         for(int i=0;i<noOfSnakes;i++){  //This part is for the snake random.
             Snakes newSnake = new Snakes();  //It is linked with the snake class.
             Random randomGenerator = new Random();
-            int randomFrom  = randomGenerator.nextInt(setRows*setColumns-10)+10;   
+            int randomFrom  = randomGenerator.nextInt(setRows*setColumns-5)+5;   
             //Here we are confirming the snakes should be ten snakes spread out in the grid. Which will have a starting and ending point.
-            int randomTo = randomGenerator.nextInt(setRows*setColumns-10)+10;
+            int randomTo = randomGenerator.nextInt(setRows*setColumns-5)+5;
             
             prevI=i;
             if(randomFrom<=randomTo){
@@ -89,8 +84,8 @@ public class CustomizeBoard implements Serializable{
 
             Ladders newLadder= new Ladders();         //This is using the Ladders class.       
             Random randomGenerator = new Random();
-            int randomFrom  = randomGenerator.nextInt(setRows*setColumns-10)+10;  //It is confirming that 10 ladders will spread out in the grid.
-            int randomTo = randomGenerator.nextInt(setRows*setColumns-10)+10;
+            int randomFrom  = randomGenerator.nextInt(setRows*setColumns-5)+5;  //It is confirming that 10 ladders will spread out in the grid.
+            int randomTo = randomGenerator.nextInt(setRows*setColumns-5)+5;
             if(randomFrom>=randomTo){
                 i--;
                 continue;

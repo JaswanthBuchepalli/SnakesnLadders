@@ -21,15 +21,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 
-/**
- * The class here is the main window with several options. 
- * The options are close the program, help button (instructions of the game), 
- * a button to see who has the highest score, 
- * about button (general information), 
- * customise your own snake and ladders game and finally play a tradition game of snake and ladders.
- * In this class, you will see more constructor which are mainly for the action listener for each JButton.
- * @author U1476904 Azhan Rashid
- */
+
 
 public class GameMenu extends javax.swing.JFrame{
 	
@@ -46,7 +38,7 @@ public class GameMenu extends javax.swing.JFrame{
      public javax.swing.JLabel scoreCard;
      private javax.swing.JLabel howToPlay;
      private javax.swing.JLayeredPane howToPlayPane1;
-     private javax.swing.JLayeredPane logo1Panel;
+   //  private javax.swing.JLayeredPane logo1Panel;
      private javax.swing.JScrollPane scoreScrollPanel;
      private javax.swing.JLabel mainMenuLabel;
      private javax.swing.JButton newGameButton;
@@ -81,7 +73,7 @@ public class GameMenu extends javax.swing.JFrame{
 	 private javax.swing.JLabel sentencePlayer;
 	 private javax.swing.JLabel grid1;
 	 private javax.swing.JLabel dice1;
-	 private javax.swing.JLabel logo2;
+	 //private javax.swing.JLabel logo2;
 	 private javax.swing.JLabel cusgame;
 	 private javax.swing.JLabel scoresentence2;
 	 private javax.swing.JLabel sentencePlayer2;
@@ -95,8 +87,8 @@ public class GameMenu extends javax.swing.JFrame{
 	 private javax.swing.JLabel cusgame4;
 	 private javax.swing.JLabel scoresentence3;
 	 private javax.swing.JLabel scoresentence4;
-	private javax.swing.JLabel logo3;
-	private javax.swing.JLayeredPane logo3Panel;
+	//private javax.swing.JLabel logo3;
+	//private javax.swing.JLayeredPane logo3Panel;
 
     /**
      * Creates new form MainMenu
@@ -144,8 +136,8 @@ public class GameMenu extends javax.swing.JFrame{
        sentencePlayer2 = new javax.swing.JLabel();
        sentencePlayer3 = new javax.swing.JLabel();
        grid2 = new javax.swing.JLabel();
-       logo2 = new javax.swing.JLabel();
-       logo3 = new javax.swing.JLabel();
+     //  logo2 = new javax.swing.JLabel();
+      // logo3 = new javax.swing.JLabel();
        grid3 = new javax.swing.JLabel();
        scoresentence = new javax.swing.JLabel();
        dice2 = new javax.swing.JLabel();
@@ -156,8 +148,8 @@ public class GameMenu extends javax.swing.JFrame{
        scoresentence4 = new javax.swing.JLabel();
        diceSnakePanel = new javax.swing.JLayeredPane();
        developerPane3 = new javax.swing.JLayeredPane();
-       logo1Panel = new javax.swing.JLayeredPane();
-       logo3Panel = new javax.swing.JLayeredPane();
+    //   logo1Panel = new javax.swing.JLayeredPane();
+       //logo3Panel = new javax.swing.JLayeredPane();
        featurePane4 = new javax.swing.JLayeredPane();
        sentencePlayerPane5 = new javax.swing.JLayeredPane();
        grid1Pane8 = new javax.swing.JLayeredPane();
@@ -253,7 +245,7 @@ public class GameMenu extends javax.swing.JFrame{
         /**
          * The code below is how I importing a picture to the how to play window. This window is just picture with three steps on how to play the tradition snake and ladders game. 
          */
-        howToPlay.setIcon(new javax.swing.ImageIcon(getClass().getResource("/snakeandladder/images/howToPlay.png"))); //Importing a how to play picture
+        howToPlay.setIcon(new javax.swing.ImageIcon(getClass().getResource("/snakeandladder/images/help.png"))); //Importing a how to play picture
         howToPlay.setBounds(0, 0, 1000, 650);  //Here i am setting the int x, y, width and length.
         howToPlayPane1.add(howToPlay, javax.swing.JLayeredPane.DEFAULT_LAYER);  //Setting the panel for this window.
         
@@ -262,14 +254,14 @@ public class GameMenu extends javax.swing.JFrame{
         diceSnakePanel.add(diceSnakepic, javax.swing.JLayeredPane.DEFAULT_LAYER); //making the image as a default layer.
         
         
-        logo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/snakeandladder/images/logo3.jpg"))); // Importing another picture to the about window.
+      /*  logo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/snakeandladder/images/logo3.jpg"))); // Importing another picture to the about window.
         logo3.setBounds(0, 0, 2000, 400); //Here i am setting the int x, y, width and length.
-        logo3Panel.add(logo3, javax.swing.JLayeredPane.DEFAULT_LAYER); //making the image as a default layer.
+        logo3Panel.add(logo3, javax.swing.JLayeredPane.DEFAULT_LAYER); //making the image as a default layer. */
         
         
-        logo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/snakeandladder/images/logo2.png"))); // Importing another picture to the about window. 
+       /* logo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/snakeandladder/images/logo2.png"))); // Importing another picture to the about window. 
         logo2.setBounds(0, 0, 2000, 400); //Here i am setting the int x, y, width and length.
-        logo1Panel.add(logo2, javax.swing.JLayeredPane.DEFAULT_LAYER); //making the image as a default layer.		 
+        logo1Panel.add(logo2, javax.swing.JLayeredPane.DEFAULT_LAYER); //making the image as a default layer.*/		 
         
         /**
          * The next set of codes is displaying JLabels in the about frame window. The structure for doing this is similar to the import picture code only it is not a image icon.
@@ -472,8 +464,8 @@ public class GameMenu extends javax.swing.JFrame{
         twoPlayersButton.setBackground(Color.BLUE); //Setting the background a different colour.
         twoPlayersButton.addActionListener(new java.awt.event.ActionListener() {  //The action listener here is used what should the button do when the button is pressed.
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-            	Music music = new Music();
-            	music.ButtonSound("click.wav");
+            //	Music music = new Music();
+            //	music.ButtonSound("click.wav");
             	twoPlayersButton(evt); //When the button is pressed, the method name here will be called and make the game to do its action.
             }
         });
@@ -481,8 +473,8 @@ public class GameMenu extends javax.swing.JFrame{
         /**
          * This JButton is for if you want to play with three player.
          */
-        threePlayersButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // Setting the font to tahoma with text size 14.
-        threePlayersButton.setText("3 Players");  //setting the button name as "3 Players".
+        /* threePlayersButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // Setting the font to tahoma with text size 14.
+        //threePlayersButton.setText("3 Players");  //setting the button name as "3 Players".
         threePlayersButton.setForeground(Color.CYAN); //Setting the text a different colour.
         threePlayersButton.setBackground(Color.BLUE); //Setting the background a different colour.
         threePlayersButton.addActionListener(new java.awt.event.ActionListener() {  //The action listener here is used what should the button do when the button is pressed.
@@ -491,7 +483,7 @@ public class GameMenu extends javax.swing.JFrame{
             	music.ButtonSound("click.wav");
             	threePlayersButton(evt);  //When the button is pressed, the method name here will be called and make the game to do its action.
             }
-        });
+        });*/
         
         /**
          * This JButton is for if you want to go back to the main menu. This is operation is valid in the window where the user can choose his/her number of players.
@@ -503,8 +495,8 @@ public class GameMenu extends javax.swing.JFrame{
         backMainMenuButton.addActionListener(new java.awt.event.ActionListener() {  //The action listener here is used what should the button do when the button is pressed.
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backMainMenuButton(evt);  //When the button is pressed, the method name here will be called and make the game to do its action.
-                Music music = new Music();
-            	music.ButtonSound("click.wav");
+         //      Music music = new Music();
+        //    	music.ButtonSound("click.wav");
             
             }
         });
@@ -513,18 +505,18 @@ public class GameMenu extends javax.swing.JFrame{
         /**
          * This JButton is for if you want to play with the computer.
          */
-        computer.setFont(new java.awt.Font("Tahoma", 0, 14)); // Setting the font to tahoma with text size 14.
+      /*  computer.setFont(new java.awt.Font("Tahoma", 0, 14)); // Setting the font to tahoma with text size 14.
         computer.setText("Computer vs Human"); //setting the button name as "Back To Main Menu".
         computer.setForeground(Color.CYAN); //Setting the text a different colour.
         computer.setBackground(Color.BLUE); //Setting the background a different colour.
         computer.addActionListener(new java.awt.event.ActionListener() {  //The action listener here is used what should the button do when the button is pressed.
             public void actionPerformed(java.awt.event.ActionEvent evt) {
             	computerPlayersButton(evt);  //When the button is pressed, the method name here will be called and make the game to do its action.
-                Music music = new Music();
-            	music.ButtonSound("click.wav");
+          //      Music music = new Music();
+          //  	music.ButtonSound("click.wav");
             
             }
-        });
+        }); */
 
         /**
          * The code below shows we are adding the buttons mentioned above to another window when the "Play Game" button is pressed.
@@ -534,24 +526,26 @@ public class GameMenu extends javax.swing.JFrame{
         playersFrameLayout.setHorizontalGroup(  //Here we are positioning the button at the horizontal axis.
             playersFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(playersFrameLayout.createSequentialGroup()
-                .addGap(58, 58, 58)
-                .addGroup(playersFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-        	            .addComponent(logo3Panel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 800, Short.MAX_VALUE)  
+                .addGap(0, 60, Short.MAX_VALUE)
+                .addGroup(playersFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+        	            //.addComponent(logo3Panel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)  
                     .addComponent(backMainMenuButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)  //Adding the back main button
-                    .addComponent(threePlayersButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE) //Adding the three player button
-                    .addComponent(computer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE) //Adding the three player button
+                    //.addComponent(threePlayersButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE) //Adding the three player button
+                    //.addComponent(computer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE) //Adding the three player button
                     .addComponent(twoPlayersButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)) //Adding the two player button
-                .addContainerGap(74, Short.MAX_VALUE))); //creating a gap from the edge.
+                
+             .addContainerGap(74, Short.MAX_VALUE)
+                )); //creating a gap from the edge.
         playersFrameLayout.setVerticalGroup(
             playersFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(playersFrameLayout.createSequentialGroup()
-    	            .addComponent(logo3Panel, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+    	         //   .addComponent(logo3Panel, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
                 .addGap(30, 30, 30)  //We are adding a gap from each button.
                 .addComponent(twoPlayersButton)
-                .addGap(18, 18, 18)
-                .addComponent(threePlayersButton)
-                .addGap(18, 18, 18)
-                .addComponent(computer)
+                //.addGap(18, 18, 18)
+                //.addComponent(threePlayersButton)
+                //.addGap(18, 18, 18)
+                //.addComponent(computer)
                 .addGap(18, 18, 18)
                 .addComponent(backMainMenuButton)
                 .addContainerGap(30, Short.MAX_VALUE)));
@@ -563,13 +557,14 @@ public class GameMenu extends javax.swing.JFrame{
         newGameButton.setBackground(Color.BLUE); //Setting the background a different colour.
         newGameButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-            	Music music = new Music();
+           // 	Music music = new Music();
             	newGameButton(evt);  //When the button is pressed, the method name here will be called and make the game to do its action.
-            	music.ButtonSound("GameMenu.wav");
+           // 	music.ButtonSound("GameMenu.wav");
             
             }
         });
-
+        
+        
         /**
          * @Exception "InterupttedException". I am using a catch method, the purpose for the catch method is the delay. When you want a sleep method involved. The try catch method is needed to make it work.
          * If the action performed is pressed and does not get interrupted, then it will work normally. Otherwise, it will cancel the normal operation and display a message in the console.
@@ -584,9 +579,9 @@ public class GameMenu extends javax.swing.JFrame{
             public void actionPerformed(java.awt.event.ActionEvent evt) {
             	//If not interruption is caused, the program will work fine. Otherwise, a message will be presented in the console.
             	try {
-            		Music music = new Music();
+            //		Music music = new Music();
                 	customizeBoardButton(evt);  //When the button is pressed, the method name here will be called and make the game to do its action.
-                	music.ButtonSound("GameMenu.wav");
+            //    	music.ButtonSound("GameMenu.wav");
             	    Thread.sleep(1500);   
             	} catch (InterruptedException e) {
             	    e.printStackTrace();
@@ -606,9 +601,9 @@ public class GameMenu extends javax.swing.JFrame{
         aboutButton.setBackground(Color.BLUE); //Setting the background a different colour.
         aboutButton.addActionListener(new java.awt.event.ActionListener() { //The action listener here is used what should the button do when the button is pressed.
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-            	Music music = new Music();
+           // 	Music music = new Music();
             	aboutButton(evt);  //When the button is pressed, the method name here will be called and make the game to do its action.
-            	music.ButtonSound("GameMenu.wav");
+           // 	music.ButtonSound("GameMenu.wav");
             }
         });
         
@@ -623,8 +618,8 @@ public class GameMenu extends javax.swing.JFrame{
         returnaboutButton.addActionListener(new java.awt.event.ActionListener() { //The action listener here is used what should the button do when the button is pressed.
             public void actionPerformed(java.awt.event.ActionEvent evt) {
             	returnaboutButton(evt);  //When the button is pressed, the method name here will be called and make the game to do its action.
-            	Music music = new Music();
-            	music.ButtonSound("GameMenu.wav");
+           // 	Music music = new Music();
+           // 	music.ButtonSound("GameMenu.wav");
             }
         });
 
@@ -632,14 +627,14 @@ public class GameMenu extends javax.swing.JFrame{
          * This JButton is for if the user want to see the high score.
          */
         highScoresButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // Setting the font to tahoma with text size 14.
-        highScoresButton.setText("Chart Table");  //setting the button name as "Chart Table".
+        highScoresButton.setText("Game score");  //setting the button name as "Chart Table".
         highScoresButton.setForeground(Color.GREEN); //Setting the text a different colour.
         highScoresButton.setBackground(Color.BLUE); //Setting the background a different colour.
         highScoresButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) { //The action listener here is used what should the button do when the button is pressed.
             	highScoresButton(evt);  //When the button is pressed, the method name here will be called and make the game to do its action.
-            	Music music = new Music();
-            	music.ButtonSound("GameMenu.wav");
+            //	Music music = new Music();
+           // 	music.ButtonSound("GameMenu.wav");
             }
         });
         
@@ -654,8 +649,8 @@ public class GameMenu extends javax.swing.JFrame{
         helpButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) { //The action listener here is used what should the button do when the button is pressed.
             	helpButton(evt);  //When the button is pressed, the method name here will be called and make the game to do its action.
-            	Music music = new Music();
-            	music.ButtonSound("GameMenu.wav");
+            	//Music music = new Music();
+            	//music.ButtonSound("GameMenu.wav");
             }
         });
 
@@ -673,8 +668,8 @@ public class GameMenu extends javax.swing.JFrame{
             public void actionPerformed(java.awt.event.ActionEvent evt) { //The action listener here is used what should the button do when the button is pressed.
             	
             	try {
-            		Music music = new Music(); //From Music class.
-                	music.ButtonSound("GameMenu.wav"); //the sound file
+            		//Music music = new Music(); //From Music class.
+                	//music.ButtonSound("GameMenu.wav"); //the sound file
             	    Thread.sleep(1500); //setting a delay so the full music background is heard from the user.
             	    exitButton(evt);  //When the button is pressed, the method name here will be called and make the game to do its action.
             	} catch (InterruptedException e) {
@@ -688,9 +683,9 @@ public class GameMenu extends javax.swing.JFrame{
         //This is displayed on blue box on the top.
         mainMenuLabel.setFont(new java.awt.Font("Tahoma", 0, 20)); // Setting the font to tahoma with text size 14.
         mainMenuLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER); //Setting this label in the centre of the window.
-        mainMenuLabel.setForeground(Color.CYAN);
+        mainMenuLabel.setForeground(Color.BLUE);
         mainMenuLabel.setText("Enjoy A Game of Snakes And Ladders...");  //setting the button name as "Main Menu".
-        getContentPane().setBackground(Color.RED); //setting the background of the background
+        getContentPane().setBackground(Color.WHITE); //setting the background of the background
 /**
  * Here I am setting buttons for the main menu. This was discussed above, This is the window which will be shown first when you boot the program.
  */
@@ -701,7 +696,7 @@ public class GameMenu extends javax.swing.JFrame{
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 60, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-        	            .addComponent(logo1Panel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 650, Short.MAX_VALUE)  
+        	            //.addComponent(logo1Panel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 650, Short.MAX_VALUE)  
                     .addComponent(highScoresButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)  //Adding the component
                     .addComponent(customizeBoardButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)  //Adding the component
                     .addComponent(newGameButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)  //Adding the component
@@ -714,7 +709,7 @@ public class GameMenu extends javax.swing.JFrame{
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap() //Gap from the edges from the window.
-	            .addComponent(logo1Panel, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+	           // .addComponent(logo1Panel, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
                 .addComponent(mainMenuLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE) //Adding the component
                 .addGap(18, 18, 18) //Adding a gap from each button in the vertical axis
                 .addComponent(newGameButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE) //Adding the component
@@ -748,10 +743,10 @@ public class GameMenu extends javax.swing.JFrame{
     private void newGameButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newGameButtonActionPerformed
         setVisible(false);
 
-        playersFrame.setSize(900, 600);  //setting the player frame with the given dimensions
+        playersFrame.setSize(450, 350);  //setting the player frame with the given dimensions
         playersFrame.setLocation(200, 200); //Moving the window to a new location.
         playersFrame.setVisible(true); //setting the window visible, this means what you want to be seen and which does not.
-        playersFrame.getContentPane().setBackground(Color.RED); //setting the background of the background
+        playersFrame.getContentPane().setBackground(Color.WHITE); //setting the background of the background
     }
     
     /**
@@ -800,8 +795,8 @@ public class GameMenu extends javax.swing.JFrame{
 	        	return;
 	        }
 	        dimension = Integer.parseInt(stringD);
-	        if(dimension<5 || dimension>12){
-	            dimension=8;
+	        if(dimension<4 || dimension>8){
+	            dimension=6;
 	            String error = "Dimensions must be between 5 and 12!!!";
 	            JOptionPane.showMessageDialog(new JFrame(), error, "Error Message", JOptionPane.ERROR_MESSAGE);  //The code to make the notification to show in the GUI.
 	            cus.setDimension(dimension,dimension);
@@ -815,11 +810,11 @@ public class GameMenu extends javax.swing.JFrame{
 	        if (JOptionPane.showConfirmDialog(new JFrame(),
 	        "Do you want to Change the position of Snakes and Ladders ?", "Customize",  //The Label
 	        JOptionPane.YES_NO_OPTION) == JOptionPane.NO_OPTION){  //Here i have coded to put two buttons on yes and no.
-	            if(dimension<=7){
+	            if(dimension<=6){
 	                cus.customBoard(6, 6); 
 	            }
 	            else{
-	                cus.customBoard(8, 8);
+	                cus.customBoard(4, 4);
 	            }
 	            return;
 	        }
@@ -978,7 +973,7 @@ public class GameMenu extends javax.swing.JFrame{
      * If you get a high score, then your name will be printed in the high score table. In this case, it is for the purpose for three players.
      * @param evt
      */
-    public void threePlayersButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_threePlayersButtonActionPerformed
+    /*public void threePlayersButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_threePlayersButtonActionPerformed
         player.setNoOfPlayers(3); //Setting the amount of player in the game.
         player.setPlayer1(JOptionPane.showInputDialog(
         new JFrame(),"Please Enter the name of Player 1 : ",""));  //Label for entering the first player name.
@@ -987,14 +982,15 @@ public class GameMenu extends javax.swing.JFrame{
         player.setPlayer3(JOptionPane.showInputDialog(
         new JFrame(),"Please Enter the name of Player 3 : ","")); //Label for entering the third player name.
         startPlay(3); //Making three players to play after they processed this window.
-    }//GEN-LAST:event_threePlayersButtonActionPerformed
+    }*/
+    //GEN-LAST:event_threePlayersButtonActionPerformed
     
     /**
      * The constructor below is where you enter your names before you start the game itself. These name is for the benefits for the players and also keeps a record of your results.
      * If you get a high score, then your name will be printed in the high score table. In this case, it is for the purpose to play with the computer.
      * @param evt
      */
-    public void computerPlayersButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_threePlayersButtonActionPerformed
+  /*  public void computerPlayersButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_threePlayersButtonActionPerformed
         player.setNoOfPlayers(2); //Setting the amount of player in the game.
         player.setPlayer1(JOptionPane.showInputDialog(
         new JFrame(),"Please Enter the name of Player 1 : ",""));  //Label for entering the first player name.
@@ -1003,7 +999,7 @@ public class GameMenu extends javax.swing.JFrame{
         startComputerPlay(2); //Making three players to play after they processed this window.
     }//GEN-LAST:event_threePlayersButtonActionPerformed
     
-    
+    */
     
 /**
  * The constructor below is if you want to back to the first window again.
@@ -1046,10 +1042,10 @@ public class GameMenu extends javax.swing.JFrame{
             play.setNamesInTextField(player.getPlayerName(0),player.getPlayerName(1),player.getPlayerName(2));
             play.setButton3Visible(false);
         }
-        else{ //This tells if its three player, then three icon will appear.
+        /*else{ //This tells if its three player, then three icon will appear.
             play.setNamesInTextField(player.getPlayerName(0),player.getPlayerName(1),player.getPlayerName(2));
             play.setButton3Visible(true);
-        }
+        }*/
         cus.setClasses(player, play, null);
         cus.createSnakesAndLadder(); //Here I am using a constructor from the customizeBoard class.
         String message = "Let's Begin The Game!!!\n"+player.getPlayerName(0)+" to begin the game.";  //The label displayed in the information message
@@ -1061,7 +1057,7 @@ public class GameMenu extends javax.swing.JFrame{
      * This is for the purpose to play with the computer.
      * @param p
      */
-    public void startComputerPlay(int CompPlayers){
+   /* public void startComputerPlay(int CompPlayers){
     
 
     	playersFrame.setVisible(false);  //setting this false because this process happens after that
@@ -1081,6 +1077,7 @@ public class GameMenu extends javax.swing.JFrame{
         String message = "Let's Begin The Game!!!\n"+player.getPlayerName(0)+" to begin the game.";  //The label displayed in the information message
         JOptionPane.showMessageDialog(new JFrame(), message, "Start", JOptionPane.INFORMATION_MESSAGE); //The GUI design for the label to be displayed.
     }
+    */
     
     /**
      * The constructor below is for the high score  frame, this is activated when the "Chart Table" button is pressed which will display a new window displaying the high score chart.

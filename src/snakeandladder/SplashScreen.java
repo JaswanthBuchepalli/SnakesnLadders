@@ -1,9 +1,5 @@
 package snakeandladder;
-/**
- * This is the class that will take action first when the user compiles the program. This class is the splash screen which is basically display a picture to distract the player.
- * I added an extra feature here, there is a loading bar at the bottom of the splash screen. It also uses the random principle again. 
- * So every-time you compile the program. It will display one picture out of three.
- */
+
 
 import java.awt.Color;
 import java.util.Random;

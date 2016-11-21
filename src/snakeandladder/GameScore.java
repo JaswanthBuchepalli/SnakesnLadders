@@ -2,11 +2,7 @@
 package snakeandladder;
 
 import java.io.Serializable;
-/**
- * This is a extension for the PlayingBoard, MainMenu, customizeBaord class.
- * @author U1476904 Azhan Rashid
- *
- */
+
 
 public class GameScore implements Comparable<GameScore>,Serializable {
     String name; //This handles the name of the person who is playing.

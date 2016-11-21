@@ -4,10 +4,7 @@
  */
 package snakeandladder;
 
-/**
- * @author U1476904 Azhan Rashid
- * This class basically where I imported the pictures for this particular project.
- */
+
 import java.io.Serializable;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;

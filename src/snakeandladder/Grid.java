@@ -1,10 +1,7 @@
 
 package snakeandladder;
 
-/**
- * @author U1476904 Azhan Rashid
- * This codes handles the snake and ladders grid, this has a close link to the CustomizeBoard class, Player class and GameMenu class. You will see how these classes have a relationship.
- */
+
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -48,8 +45,8 @@ public class Grid extends javax.swing.JFrame{
      * Here I am setting the amount of rows needed to make the grid. In this case, my grid is to be 100.
      */
     public Grid() {
-        setRows=10; //The amount of rows is 10.
-        setColumns=10; //The amount of columns is 10, so 10*10 is 100.
+        setRows=6; //The amount of rows is 10.
+        setColumns=6; //The amount of columns is 10, so 10*10 is 100.
         grid = new JLabel[setColumns*setRows]; //creating the JLabel for the grid.
         GUI(); //This is a constructor.
     }
@@ -110,8 +107,8 @@ public class Grid extends javax.swing.JFrame{
             	    
             	    rollDiceButton(evt); //When the button is pressed, the method name here will be called and make the game to do its action. 
             	    Thread.sleep(1000);
-            	    Music music = new Music();
-                	music.ButtonSound("aliensound.wav");
+            	   // Music music = new Music();
+                //	music.ButtonSound("aliensound.wav");
             	} catch (InterruptedException e) {
             	    e.printStackTrace();
             	    JOptionPane.showMessageDialog(null, "Interruption occurred"); //Popping up a JFrame message that a interruption is occurred.
@@ -128,8 +125,8 @@ public class Grid extends javax.swing.JFrame{
         Restart.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) { //The action listener here is used what should the button do when the button is pressed.
             	newGameMenuItem(evt); //When the button is pressed, the method name here will be called and make the game to do its action.
-            	Music music = new Music();
-            	music.ButtonSound("aliensound.wav");
+            //	Music music = new Music();
+            //	music.ButtonSound("aliensound.wav");
             }
         });
 
@@ -191,7 +188,7 @@ public class Grid extends javax.swing.JFrame{
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(greenPlayerLabel) //These are player variables, This is player 1.
                     .addComponent(pinkPlayerLabel) //This is player 2
-                    .addComponent(bluePlayerLabel)) //This is player 3
+                   .addComponent(bluePlayerLabel)) //This is player 3
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -226,8 +223,8 @@ public class Grid extends javax.swing.JFrame{
         newGameMenuItem.addActionListener(new java.awt.event.ActionListener() { //The action listener here is used what should the button do when the button is pressed.
             public void actionPerformed(java.awt.event.ActionEvent evt) {
             	newGameMenuItem(evt); //When the button is pressed, the method name here will be called and make the game to do its action.
-            	Music music = new Music();
-            	music.ButtonSound("aliensound.wav");
+            //	Music music = new Music();
+            //	music.ButtonSound("aliensound.wav");
             }
         });
         jMenu1.add(newGameMenuItem);
@@ -241,8 +238,8 @@ public class Grid extends javax.swing.JFrame{
         scoreCardMenuItem.addActionListener(new java.awt.event.ActionListener() { //The action listener here is used what should the button do when the button is pressed.
             public void actionPerformed(java.awt.event.ActionEvent evt) {
             	scoreCardMenuItem(evt); //When the button is pressed, the method name here will be called and make the game to do its action.
-            	Music music = new Music();
-            	music.ButtonSound("aliensound.wav");
+            //	Music music = new Music();
+            //	music.ButtonSound("aliensound.wav");
             }
         });
         jMenu1.add(scoreCardMenuItem);
@@ -256,8 +253,8 @@ public class Grid extends javax.swing.JFrame{
         exitMenuItem.addActionListener(new java.awt.event.ActionListener() { //The action listener here is used what should the button do when the button is pressed.
             public void actionPerformed(java.awt.event.ActionEvent evt) {
             	exitMenuItem(evt); //When the button is pressed, the method name here will be called and make the game to do its action.
-            	Music music = new Music();
-            	music.ButtonSound("aliensound.wav");
+            //	Music music = new Music();
+            //	music.ButtonSound("aliensound.wav");
             }
         });
         
@@ -305,7 +302,9 @@ public class Grid extends javax.swing.JFrame{
          * For example, if random generates a one, then the dice icon with one dot will be displayed. And so on...
          * I also coded the string version, this is commented it. You can try it out of course this will mean you would have to comment out the if statements.
          */
-        if(random == 1){
+       
+        /*
+         * if(random == 1){
         	diceString.setIcon(getImage(30));
         }
         if(random ==2){
@@ -325,13 +324,13 @@ public class Grid extends javax.swing.JFrame{
         	diceString.setIcon(getImage(35));
         	
         }
+        */
         
  /**   
-  * IF YOU WANT TO MAKE A STRING WORD INSTRAD OF DICE PICTURE, THE CODE IS ALREADY AVAILABLE. YOU CAN COMMENT OUT THE IF STATEMENTS ABOVE AND UNCOMMENT THE CODE BELOW.    
-  * String random2 = Integer.toString(random); //setting a new variable for the JLabel.
-  * diceString.setFont(new java.awt.Font("Tahoma", 0, 16));  //Setting the text size 16 and font to be tahoma.
-  * diceString.setText("Dice No: " + random2); //The String to be displayed in the snake and ladder window.*/
-        
+  * IF YOU WANT TO MAKE A STRING WORD INSTRAD OF DICE PICTURE, THE CODE IS ALREADY AVAILABLE. YOU CAN COMMENT OUT THE IF STATEMENTS ABOVE AND UNCOMMENT THE CODE BELOW.    */
+  String random2 = Integer.toString(random); //setting a new variable for the JLabel.
+   diceString.setFont(new java.awt.Font("Tahoma", 0, 16));  //Setting the text size 16 and font to be tahoma.
+   diceString.setText("Dice No: " + random2); //The String to be displayed in the snake and ladder window.
         
         diceString.setBounds(0, 170, 1000, 400); // Plot the JLabel in the correct coordinate.
         if(player.checkValidity(player.turn, random)==0){
@@ -457,7 +456,7 @@ public class Grid extends javax.swing.JFrame{
     	
         
        setRows=cus.getRows(); setColumns=cus.getColumns();
-       if(cus.getRows()>=9){ //Giving a total of 100 boxes in a box.
+       if(cus.getRows()>=6){ //Giving a total of 100 boxes in a box.
            setSize(1500+setRows*20, 1000); 
            
        }
@@ -618,7 +617,7 @@ public class Grid extends javax.swing.JFrame{
             
         }
         //Otherwise, three strings will appear.
-        else if(player.getNoOfPlayers()==3){
+        else if(player.getNoOfPlayers()==2){
             greenPlayerLabel.setText(p1);
             pinkPlayerLabel.setText(p2);
             bluePlayerLabel.setText(p3);

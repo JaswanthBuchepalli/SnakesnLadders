@@ -1,10 +1,6 @@
 package snakeandladder;
 
-/**
- * @author U1476904 Azhan Rashid
- * This codes handles the snake and ladders grid, this class has a close link to the CustomizeBoard class, Player class and GameMenu class. You will see how these classes have a relationship.
- * If the user want to play with the computer. This is activated when you press the Human vs Computer JButton in the GameMenu class.
- */
+
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -46,8 +42,8 @@ public class GridComp extends javax.swing.JFrame{
      * Here I am setting the amount of rows needed to make the grid. In this case, my grid is to be 100
      */
     public GridComp() {
-        setRows=10; //The amount of rows is 10
-        setColumns=10; //The amount of columns is 10, so 10*10 is 100.
+        setRows=5; //The amount of rows is 10
+        setColumns=5; //The amount of columns is 10, so 10*10 is 100.
         grid = new JLabel[setColumns*setRows]; //creating the JLabel for the grid.
         GUI(); //This is a constructor.
     }
@@ -105,8 +101,8 @@ public class GridComp extends javax.swing.JFrame{
             	    rollDiceButton(evt); //When the button is pressed, the method name here will be called and make the game to do its action.
             	    rollDiceButton(evt); //When the button is pressed, the method name here will be called and make the game to do its action.
             	    Thread.sleep(1000);
-            	    Music music = new Music();
-                	music.ButtonSound("aliensound.wav");
+            	 //   Music music = new Music();
+                //	music.ButtonSound("aliensound.wav");
             	} catch (InterruptedException e) {
             	    e.printStackTrace();
             	}
@@ -119,8 +115,8 @@ public class GridComp extends javax.swing.JFrame{
         Restart.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) { //The action listener here is used what should the button do when the button is pressed.
             	newGameMenuItem(evt); //When the button is pressed, the method name here will be called and make the game to do its action.
-            	Music music = new Music();
-            	music.ButtonSound("aliensound.wav");
+            //	Music music = new Music();
+            //	music.ButtonSound("aliensound.wav");
             }
         });
 
@@ -220,8 +216,8 @@ public class GridComp extends javax.swing.JFrame{
         newGameMenuItem.addActionListener(new java.awt.event.ActionListener() { //The action listener here is used what should the button do when the button is pressed.
             public void actionPerformed(java.awt.event.ActionEvent evt) {
             	newGameMenuItem(evt); //When the button is pressed, the method name here will be called and make the game to do its action.
-            	Music music = new Music();
-            	music.ButtonSound("aliensound.wav");
+        //    	Music music = new Music();
+         //   	music.ButtonSound("aliensound.wav");
             }
         });
         jMenu1.add(newGameMenuItem);
@@ -235,8 +231,8 @@ public class GridComp extends javax.swing.JFrame{
         scoreCardMenuItem.addActionListener(new java.awt.event.ActionListener() { //The action listener here is used what should the button do when the button is pressed.
             public void actionPerformed(java.awt.event.ActionEvent evt) {
             	scoreCardMenuItem(evt); //When the button is pressed, the method name here will be called and make the game to do its action.
-            	Music music = new Music();
-            	music.ButtonSound("aliensound.wav");
+            //	Music music = new Music();
+            //	music.ButtonSound("aliensound.wav");
             }
         });
         jMenu1.add(scoreCardMenuItem);
@@ -250,8 +246,8 @@ public class GridComp extends javax.swing.JFrame{
         exitMenuItem.addActionListener(new java.awt.event.ActionListener() { //The action listener here is used what should the button do when the button is pressed.
             public void actionPerformed(java.awt.event.ActionEvent evt) {
             	exitMenuItem(evt); //When the button is pressed, the method name here will be called and make the game to do its action.
-            	Music music = new Music();
-            	music.ButtonSound("aliensound.wav");
+            //	Music music = new Music();
+            //	music.ButtonSound("aliensound.wav");
             }
         });
         
@@ -453,7 +449,7 @@ public class GridComp extends javax.swing.JFrame{
     public void showGrids(){
         
        setRows=cus.getRows(); setColumns=cus.getColumns();
-       if(cus.getRows()>=9){ //Giving a total of 100 boxes in a box.
+       if(cus.getRows()>=4){ //Giving a total of 100 boxes in a box.
            setSize(1500+setRows*20, 1000); 
            
        }
@@ -612,10 +608,10 @@ public class GridComp extends javax.swing.JFrame{
             
         }
         //Otherwise, three strings will appear.
-        else if(player.getNoOfPlayers()==3){
+        else if(player.getNoOfPlayers()==2){
             greenPlayerLabel.setText(p1);
             pinkPlayerLabel.setText(p2);
-            bluePlayerLabel.setText(p3);
+            //bluePlayerLabel.setText(p3);
         }
     }
  
