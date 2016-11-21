@@ -21,7 +21,10 @@ public class CustomizeBoard implements Serializable{
     Snakes tempSnake=null;		//At this point, the Snakes class is in a black hole.
     Ladders tempLadder = null;		//At this point the Ladders class is in a black hole.
     
-    
+    /*
+     * 
+     * 
+     */
 
     public void setDimension(int r, int c){
         setRows=r;   //I am calling my rows as "r".
