@@ -1138,15 +1138,15 @@ public class GameMenu extends javax.swing.JFrame{
         i=0;
         for(GameScore score : oldScores){
             if(i==9){
-                highScoreValue = score.playerMoves; //If it is the top 10 then continue with the process.
+                highScoreValue = score.getPlayerMoves(); //If it is the top 10 then continue with the process.
             }
             if(i>=10){
                 break; //Here I am saying if its not in the top ten then forget about it.
             }
             scoreTable.getModel().setValueAt(i+1, i, 0);  
-            scoreTable.getModel().setValueAt(score.name+" ", i, 1);  //This is to set the name in the high score table.
-            scoreTable.getModel().setValueAt(score.playerMoves, i, 2); //This calculates the amount of turn you take to complete the game, This start each time you pressed the "Roll Dice" button.
-            scoreTable.getModel().setValueAt(score.dimension, i, 3); //Printing the dimension you have chosen.
+            scoreTable.getModel().setValueAt(score.getName()+" ", i, 1);  //This is to set the name in the high score table.
+            scoreTable.getModel().setValueAt(score.getPlayerMoves(), i, 2); //This calculates the amount of turn you take to complete the game, This start each time you pressed the "Roll Dice" button.
+            scoreTable.getModel().setValueAt(score.getDimension(), i, 3); //Printing the dimension you have chosen.
             i++;
         }
         //Exception number 3.

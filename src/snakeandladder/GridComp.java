@@ -604,7 +604,7 @@ public class GridComp extends javax.swing.JFrame{
         if(player.getNoOfPlayers()==2){
             greenPlayerLabel.setText(p1);
             pinkPlayerLabel.setText(p2);
-            bluePlayerLabel.setText("");
+           
             
         }
         //Otherwise, three strings will appear.

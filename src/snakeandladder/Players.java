@@ -16,14 +16,13 @@ import javax.swing.JOptionPane;
 
 public class Players {
     
-	public String[] playerNames = new String[3];  //This is where I detailed the maximum amount of players string, this is for when you input your name.
-    public int[] playerMoves = new int[3];  //Enabling each players move.
-    public int[] playerLocations = new int[3]; //The location for each player
+	public String[] playerNames = new String[3];  
+    public int[] playerMoves = new int[3];  
+    public int[] playerLocations = new int[3]; 
     public int numberOfPlayers=2; //The minimum amount of players.
     public int turn=0, won=0; //At this point, the amount of turns and winning is zero.
     CustomizeBoard cus=null;  
-    GameMenu menu;  
-    
+    GameMenu menu;
     public GameScore newPlayersScore;
     
     public GameScore getNewScore(){
@@ -31,7 +30,7 @@ public class Players {
     }
     
     public Players() { //The constructor for all players stated here.
-        for(int i=0;i<3;i++){
+        for(int i=0;i<2;i++){
             playerNames[i] = new String();
             playerNames[i]="Player "+i;
             playerMoves[i]=0;
@@ -51,13 +50,7 @@ public class Players {
     public void setPlayer2(String p2){
         playerNames[1]=new String(p2);
     }
-  //Setting the string player 3
-    public void setPlayer3(String p3){
-        playerNames[2]=new String(p3);
-    }
     
-
-
     public void setNoOfPlayers(int noOfPlayers) {
         this.numberOfPlayers = noOfPlayers;
     }
@@ -119,9 +112,9 @@ public class Players {
     public void saveHighScore(){
         GameScore newScore =new GameScore();
         ArrayList<GameScore> oldScores = new ArrayList<>();        
-        newScore.name=playerNames[turn];
-        newScore.playerMoves=playerMoves[turn];
-        newScore.dimension=cus.setColumns;
+        newScore.setName(playerNames[turn]);
+        newScore.setPlayerMoves(playerMoves[turn]);
+        newScore.setDimension(cus.setColumns);
         
         try {
             FileInputStream fileStream = new FileInputStream("HighScoreList.ser");  //A FileInputStream obtains input bytes from a file in a file system.
@@ -148,8 +141,8 @@ public class Players {
         
         int maxMin=0, i=1;
         for(GameScore score : oldScores){
-            if(score.playerMoves>maxMin){
-                maxMin=score.playerMoves;
+            if(score.getPlayerMoves() >maxMin){
+                maxMin=score.getPlayerMoves();
             }
             i++;
             if(i>=10){
@@ -167,19 +160,18 @@ public class Players {
             os.writeObject(oldScores);    //Here is the process how the code overwrites one of the old scores with this new score.        
             os.close();
         } catch (IOException ef) {
-            System.out.println("\nFile Not Found!!!"); //This will be displayed in the console of the Eclipse. I found it better to be displayed here.
-            ef.printStackTrace(); //Prints this throwable and its back-trace to the standard error stream.
+            System.out.println("\nFile Not Found!!!"); 
+            ef.printStackTrace(); 
         }      
     }
-    /**
-     * The constructor below only processed if you have beaten some members already detailed in the high score table.
-     */
+   
+    
     public void congratulate(){
         if(menu.highScoreValue>playerMoves[turn]){
         	
-            JOptionPane.showMessageDialog(new JFrame(),"You are our new High Scorer", "New High Score", JOptionPane.INFORMATION_MESSAGE); //Message window which displays if your score beats another score/s in the table.
-            menu.setScoreCardFrameVisible(true); //Setting the score card visible.
-            menu.printHighScores();            //Here is where the high score is printed out
+            JOptionPane.showMessageDialog(new JFrame(),"You are our new High Scorer", "New High Score", JOptionPane.INFORMATION_MESSAGE); 
+            menu.setScoreCardFrameVisible(true); 
+            menu.printHighScores();            
             
         }
     }
