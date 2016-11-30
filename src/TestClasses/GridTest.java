@@ -13,7 +13,7 @@ import org.junit.Test;
 import snakeandladder.CustomizeBoard;
 import snakeandladder.GameMenu;
 import snakeandladder.Grid;
-import snakeandladder.Players;
+import snakeandladder.Player;
 
 public class GridTest {
 	
@@ -21,7 +21,7 @@ public class GridTest {
 	private boolean s;
 	private CustomizeBoard c;
 	private GameMenu m;
-	private Players p;
+	private Player p;
 	private boolean b;
 	private String p1;
 	private String p2;
@@ -30,7 +30,7 @@ public class GridTest {
 	private ActionEvent evt;
 	private int setRows;
 	private CustomizeBoard cus;
-	private Players player;
+	private Player player;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {

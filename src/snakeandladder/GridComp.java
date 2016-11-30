@@ -425,7 +425,7 @@ public class GridComp extends javax.swing.JFrame{
         setVisibility(false);        
         menu = new GameMenu();  //This is from the MainMenu class.
         cus = new CustomizeBoard(); //This is from the customizeBoard class.
-        player = new Players(); //This is from the Players class.
+        player = new Player(); //This is from the Players class.
         menu.setClasses(cus, player);
         cus.setClasses(player, null, null);
         menu.setVisibility(true);
@@ -435,7 +435,7 @@ public class GridComp extends javax.swing.JFrame{
     //setting variables for each class. At this point it is null, these classes will be used in several constructor below.
     CustomizeBoard cus =null;
     GameMenu menu = null;    
-    Players player = new Players();
+    Player player = new Player();
     int setRows, setColumns;
     javax.swing.JLabel[] grid;
     Icon previousIcon=null;
@@ -492,7 +492,7 @@ public class GridComp extends javax.swing.JFrame{
      * @param m
      * @param p
      */
-    public void setClasses(CustomizeBoard c, GameMenu m, Players p){
+    public void setClasses(CustomizeBoard c, GameMenu m, Player p){
         cus=c;
         menu=m;
         player=p;

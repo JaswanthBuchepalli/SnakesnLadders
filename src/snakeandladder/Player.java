@@ -1,8 +1,5 @@
 
 package snakeandladder;
-
-
-
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -14,7 +11,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 
-public class Players {
+public class Player {
     
 	public String[] playerNames = new String[3];  
     public int[] playerMoves = new int[3];  
@@ -29,7 +26,7 @@ public class Players {
         return (new GameScore());
     }
     
-    public Players() { //The constructor for all players stated here.
+    public Player() { //The constructor for all players stated here.
         for(int i=0;i<2;i++){
             playerNames[i] = new String();
             playerNames[i]="Player "+i;

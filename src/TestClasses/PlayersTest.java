@@ -10,7 +10,7 @@ import org.junit.Test;
 
 import snakeandladder.CustomizeBoard;
 import snakeandladder.GameMenu;
-import snakeandladder.Players;
+import snakeandladder.Player;
 
 public class PlayersTest {
 	
@@ -19,7 +19,7 @@ public class PlayersTest {
 
 	private static final CustomizeBoard c = null;
 	private static final GameMenu m = null;
-	Players test = new Players();
+	Player test = new Player();
 	private String p1;
 	private String p2;
 	private String p3;

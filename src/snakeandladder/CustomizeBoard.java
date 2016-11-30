@@ -15,7 +15,7 @@ public class CustomizeBoard implements Serializable{
     int setRows =5, setColumns=5;   //Here i am setting the amount of columns and rows, in this case, it is 100 box grid.
     ArrayList<Snakes> snakes = new ArrayList<>();  //We need to display the snakes icons, so we use a array to make the snake to change the player down to a lower number.
     ArrayList<Ladders> ladders = new ArrayList<>(); //We need to display the ladders icons, so we use a array to make the ladder to change the player up to a higher number.
-    Players player=null;   //At this point, the Player class is in a black hole.
+    Player player=null;   //At this point, the Player class is in a black hole.
     GridComp play2 = null; //At this point, GridComp class is in a black hole.
     Grid play = null;        //At this point, Grid class is in a black hole.
     Snakes tempSnake=null;		//At this point, the Snakes class is in a black hole.
@@ -162,7 +162,7 @@ public class CustomizeBoard implements Serializable{
         return random;
     }
     
-    public void setClasses(Players players,Grid grid, GridComp comp){  //Here we are setting variable for the class detailed in the brackets.
+    public void setClasses(Player players,Grid grid, GridComp comp){  //Here we are setting variable for the class detailed in the brackets.
         player=players;  //The Player class is variable players
         play = grid;   //The Grid is variable grid
         play2 = comp;	////The GridComp is variable grid

@@ -433,7 +433,7 @@ public class Grid extends javax.swing.JFrame{
         setVisibility(false);        
         menu = new GameMenu();  //This is from the MainMenu class.
         cus = new CustomizeBoard(); //This is from the customizeBoard class.
-        player = new Players(); //This is from the Players class.
+        player = new Player(); //This is from the Players class.
         menu.setClasses(cus, player);
         cus.setClasses(player, null, null);
         menu.setVisibility(true);
@@ -442,7 +442,7 @@ public class Grid extends javax.swing.JFrame{
 
     CustomizeBoard cus =null;
     GameMenu menu = null;    
-    public Players player = new Players();
+    public Player player = new Player();
     int setRows, setColumns;
     public javax.swing.JLabel[] grid;
     Icon previousIcon=null;
@@ -503,7 +503,7 @@ public class Grid extends javax.swing.JFrame{
      * @param m
      * @param p
      */
-    public void setClasses(CustomizeBoard c, GameMenu m, Players p){
+    public void setClasses(CustomizeBoard c, GameMenu m, Player p){
         cus=c;
         menu=m;
         player=p;

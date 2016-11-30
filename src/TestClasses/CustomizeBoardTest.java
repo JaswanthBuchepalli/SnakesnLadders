@@ -11,7 +11,7 @@ import org.junit.Test;
 import snakeandladder.CustomizeBoard;
 import snakeandladder.Grid;
 import snakeandladder.GridComp;
-import snakeandladder.Players;
+import snakeandladder.Player;
 
 public class CustomizeBoardTest {
 	
@@ -20,12 +20,12 @@ public class CustomizeBoardTest {
 	private int n;
 	private int m;
 	private int pos;
-	private Players p;
+	private Player p;
 	private Grid g;
 	private Object obj;
 	private int r;
 	private int c;
-	private Players players;
+	private Player players;
 	private Grid grid;
 	private GridComp comp;
 	private int setColumns;
@@ -33,7 +33,7 @@ public class CustomizeBoardTest {
 	private int snake;
 	private int ladder;
 	private int position;
-	private Players player;
+	private Player player;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {

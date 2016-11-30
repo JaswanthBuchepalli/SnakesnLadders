@@ -1015,14 +1015,14 @@ public class GameMenu extends javax.swing.JFrame{
     CustomizeBoard cus = null;  //At this point customizeBoard is in a black hole
     GridComp comp = null;
     Grid play = null;    //At this point PlayingBoard is in a black hole
-    Players player=null;     //At this point Players is in a black hole
+    Player player=null;     //At this point Players is in a black hole
     int highScoreValue=0;
     
     public void setVisibility(boolean s){
         setVisible(s);  //Shows or hides this Window depending on the value of parameter s
     }
     
-    public void setClasses(CustomizeBoard customise, Players players){
+    public void setClasses(CustomizeBoard customise, Player players){
         cus=customise;  //calling new variable for the given class.
         player=players; //calling new variable for the given class.
         

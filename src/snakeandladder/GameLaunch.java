@@ -21,7 +21,7 @@ public class GameLaunch {
             setLookAndFeel(); //This method is from a constructor below.
             GameMenu mainMenu = new GameMenu();  
             CustomizeBoard cus = new CustomizeBoard();
-            Players player = new Players();
+            Player player = new Player();
             //SplashScreen spl = new SplashScreen(); 
             //spl.splash();  //making the splash screen to operate in the super class.
             mainMenu.setClasses(cus,player); //using these variable made the class to have less code.

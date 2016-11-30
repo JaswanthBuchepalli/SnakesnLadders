@@ -12,14 +12,14 @@ import org.junit.Test;
 
 import snakeandladder.CustomizeBoard;
 import snakeandladder.GameMenu;
-import snakeandladder.Players;
+import snakeandladder.Player;
 
 public class GameMenuTest {
 
 	private static final int HumanPlayers = 0;
 	GameMenu test = new GameMenu();
 	private CustomizeBoard c;
-	private Players p;
+	private Player p;
 	private boolean s;
 	private boolean b;
 	private ActionEvent evt;

@@ -13,7 +13,7 @@ import org.junit.Test;
 import snakeandladder.CustomizeBoard;
 import snakeandladder.GameMenu;
 import snakeandladder.GridComp;
-import snakeandladder.Players;
+import snakeandladder.Player;
 
 public class GridCompTest {
 	
@@ -23,7 +23,7 @@ public class GridCompTest {
 	private static final String p3 = null;
 	private static final boolean s = false;
 	private static final ActionEvent evt = null;
-	private static final Players p = null;
+	private static final Player p = null;
 	private static final GameMenu m = null;
 	private static final CustomizeBoard c = null;
 	GridComp t = new GridComp();
